@@ -1,0 +1,26 @@
+score par jeu
+
+ncurse:
+pixel art (dittering)
+
+SDL:
+sprites
+tourner les sprites
+
+SFML:
+tourner les sprites
+souris / clavier
+
+Games :
+
+Doc :
+
+Mieux faire la doc (commentaires doxygen)
+
+exceptions : 1 si exceptions gérées
+
+Template DLLoader gérées
+
+Faire un autre Template pour 0.5 en +
+
+MVC pattern

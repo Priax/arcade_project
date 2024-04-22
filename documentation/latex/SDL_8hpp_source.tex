@@ -1,0 +1,90 @@
+\doxysection{SDL.\+hpp}
+\hypertarget{SDL_8hpp_source}{}\label{SDL_8hpp_source}\index{graph/SDL.hpp@{graph/SDL.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/OOP-\/400-\/MAR-\/4-\/1-\/arcade-\/vincent.montero-\/fontaine}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ SDL}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SDL\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SDL\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}IGraph.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}../core\_/GameState.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_ttf.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_image.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <unistd.h>}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{namespace\ }arcade\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }SDL;}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classarcade_1_1SDL}{arcade::SDL}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classarcade_1_1IGraph}{arcade::IGraph}}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{enum}\ Menu\_State\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ GAME\_LIB,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ GRAPH\_LIB,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ TYP\_USR,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ DEFAULT,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classarcade_1_1SDL_1_1Error}{Error}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classarcade_1_1SDL_1_1Error}{Error}}(std::string\ msg\ =\ \textcolor{stringliteral}{"{}"{}},\ std::string\ where\ =\ \textcolor{stringliteral}{"{}"{}})\ :\ \_error\_msg(msg),\ \_where(where)\ \{\};}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *what()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \textcolor{keyword}{override}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_error\_msg.c\_str();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *where()\ \textcolor{keyword}{const}\ \textcolor{keyword}{noexcept}\ \{}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_where.c\_str();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \_error\_msg;}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ \_where;}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classarcade_1_1SDL}{SDL}}();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classarcade_1_1SDL}{\string~SDL}}();}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classarcade_1_1SDL_ac313d4888b4b6639286c2018e514bb86}{displayWindow}}(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayArcadeMenu(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ renderUserInput(\textcolor{keyword}{const}\ std::string\&\ text,\ \textcolor{keyword}{const}\ SDL\_Color\&\ color,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ renderRect(SDL\_Renderer\ *renderer,\ \textcolor{keyword}{const}\ SDL\_Rect\ \&rect,\ \textcolor{keyword}{const}\ SDL\_Color\ \&color);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ handle\_typing(SDL\_Event\ \&event,\ std::string\ \&inputText,\ std::string\ \&savedText);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ move\_rectangle(SDL\_Event\ \&event,\ SDL\_Rect\ \&myRect,\ \textcolor{keywordtype}{int}\ numItems);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ render\_sdl(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs,\ std::string\ \&inputText,\ SDL\_Rect\ myRect,\ SDL\_Color\ rectColor,\ SDL\_Color\ textColor,\ std::vector<std::string>\ Libs);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ render\_vector(\textcolor{keyword}{const}\ std::vector<std::string>\&\ vec,\ \textcolor{keyword}{const}\ SDL\_Color\&\ textColor,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{comment}{//void\ render\_text(const\ std::string\&\ text,\ const\ SDL\_Color\&\ color,\ int\ x,\ int\ y,\ int\ maxWidth);}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ render\_text(\textcolor{keyword}{const}\ std::string\ \&text,\ \textcolor{keyword}{const}\ SDL\_Color\ \&color,\ \textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ fontSize,\ \textcolor{keywordtype}{int}\ maxWidth);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayGame(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayGameStart(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ chooseLib(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs,\ SDL\_Event\ event,\ SDL\_Rect\ myRect,\ \textcolor{keywordtype}{size\_t}\ *currentListIndex,\ std::vector<std::vector<std::string>>\ allLists);}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ renderSprite(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ SDL\_Texture\ *texture);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ renderSprite(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y,\ SDL\_Texture\ *texture,\ SDL\_Rect*\ srcRect);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ SDL\_Texture\ *loadTexture(\textcolor{keyword}{const}\ std::string\&\ path,\ SDL\_Renderer*\ renderer);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ gameEvents(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs,\ SDL\_Event\ event);}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ gameOverMenu(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ SDL\_Window\ *\_window;}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ SDL\_Renderer\ *\_renderer;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ TTF\_Font\ *\_font;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_spacing;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ Menu\_State\ \_state;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_textXOffset\ =\ 160;\ \ \textcolor{comment}{//\ X\ offset\ for\ text\ rendering}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_textYOffset\ =\ 110;\ \ \textcolor{comment}{//\ Y\ offset\ for\ text\ rendering}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_rectXOffset\ =\ 110;\ \ \textcolor{comment}{//\ X\ offset\ for\ selection\ rectangle}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_rectYOffset\ =\ 110;\ \ \textcolor{comment}{//\ Y\ offset\ for\ selection\ rectangle}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ SDL\_Texture\ *\_wall\_texture;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ SDL\_Texture\ *\_apple\_texture;}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ SDL\_Texture\ *\_yellow\_apple\_texture;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ SDL\_Texture\ *\_snake\_texture;}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ SDL\_Texture\ *\_head\_texture;}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classarcade_1_1SDL_1_1Error}{Error}}\ \_error;}
+\DoxyCodeLine{00082\ \};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !SDL\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

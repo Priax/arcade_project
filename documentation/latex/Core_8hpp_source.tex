@@ -1,0 +1,52 @@
+\doxysection{Core.\+hpp}
+\hypertarget{Core_8hpp_source}{}\label{Core_8hpp_source}\index{core\_/Core.hpp@{core\_/Core.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/OOP-\/400-\/MAR-\/4-\/1-\/arcade-\/vincent.montero-\/fontaine}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Core}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ CORE\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ CORE\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}DLLoader.hpp"{}}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}../game/IGame.hpp"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}../graph/IGraph.hpp"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}GameState.hpp"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }arcade}
+\DoxyCodeLine{00018\ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{class\ }Core;}
+\DoxyCodeLine{00020\ \}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classarcade_1_1Core}{arcade::Core}}}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1Core}{Core}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1Core}{\string~Core}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ setGraphLib(std::string\ path);}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ setGameLib(std::string\ path);}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1DLLoader}{DLLoader<arcade::IGraph>}}\&\ getGraphLoader();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1DLLoader}{DLLoader<arcade::IGame>}}\&\ getGameLoader();}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ getGameState();}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ arcade();}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1IGraph}{IGraph}}*\ updateGraph();}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1IGame}{IGame}}*\ initGame();}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ updateScores();}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00038\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1DLLoader}{DLLoader<arcade::IGraph>}}\ \_graph;}
+\DoxyCodeLine{00040\ \ \ \ \ std::string\ \_graphName\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1DLLoader}{DLLoader<arcade::IGame>}}\ \_game;}
+\DoxyCodeLine{00042\ \ \ \ \ std::string\ \_gameName\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \_gameState;}
+\DoxyCodeLine{00044\ \};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !CORE\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

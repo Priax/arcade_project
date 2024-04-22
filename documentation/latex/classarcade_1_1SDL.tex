@@ -1,0 +1,99 @@
+\doxysection{arcade\+::SDL Class Reference}
+\hypertarget{classarcade_1_1SDL}{}\label{classarcade_1_1SDL}\index{arcade::SDL@{arcade::SDL}}
+Inheritance diagram for arcade\+::SDL\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classarcade_1_1SDL}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classarcade_1_1SDL_1_1Error}{Error}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classarcade_1_1SDL_aca27b451b17e235a11d2fbaed34933fe}\label{classarcade_1_1SDL_aca27b451b17e235a11d2fbaed34933fe} 
+enum {\bfseries Menu\+\_\+\+State} \{ {\bfseries GAME\+\_\+\+LIB}
+, {\bfseries GRAPH\+\_\+\+LIB}
+, {\bfseries TYP\+\_\+\+USR}
+, {\bfseries DEFAULT}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classarcade_1_1SDL_ac313d4888b4b6639286c2018e514bb86}{display\+Window}} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs)
+\item 
+\Hypertarget{classarcade_1_1SDL_a6601bb1d7ad12adb54fef11a74c9b5e3}\label{classarcade_1_1SDL_a6601bb1d7ad12adb54fef11a74c9b5e3} 
+void {\bfseries display\+Arcade\+Menu} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs)
+\item 
+\Hypertarget{classarcade_1_1SDL_aff5cb96c1d9ea48ced3dc81b649347a5}\label{classarcade_1_1SDL_aff5cb96c1d9ea48ced3dc81b649347a5} 
+void {\bfseries render\+User\+Input} (const std\+::string \&text, const SDL\+\_\+\+Color \&color, int x, int y)
+\item 
+\Hypertarget{classarcade_1_1SDL_a4b7b72da2dc1350b9cdb8a502170e5b3}\label{classarcade_1_1SDL_a4b7b72da2dc1350b9cdb8a502170e5b3} 
+void {\bfseries render\+Rect} (SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer, const SDL\+\_\+\+Rect \&rect, const SDL\+\_\+\+Color \&color)
+\item 
+\Hypertarget{classarcade_1_1SDL_ab78c885e59609fc65e4415c44a1e85b0}\label{classarcade_1_1SDL_ab78c885e59609fc65e4415c44a1e85b0} 
+void {\bfseries handle\+\_\+typing} (SDL\+\_\+\+Event \&event, std\+::string \&input\+Text, std\+::string \&saved\+Text)
+\item 
+\Hypertarget{classarcade_1_1SDL_a58a87ca3232c50c8442d1322fc72f4c1}\label{classarcade_1_1SDL_a58a87ca3232c50c8442d1322fc72f4c1} 
+void {\bfseries move\+\_\+rectangle} (SDL\+\_\+\+Event \&event, SDL\+\_\+\+Rect \&my\+Rect, int num\+Items)
+\item 
+\Hypertarget{classarcade_1_1SDL_a6e8a28510daf54303a05bfb272584d68}\label{classarcade_1_1SDL_a6e8a28510daf54303a05bfb272584d68} 
+void {\bfseries render\+\_\+sdl} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs, std\+::string \&input\+Text, SDL\+\_\+\+Rect my\+Rect, SDL\+\_\+\+Color rect\+Color, SDL\+\_\+\+Color text\+Color, std\+::vector$<$ std\+::string $>$ Libs)
+\item 
+\Hypertarget{classarcade_1_1SDL_a6f95ac12930d7ee7947abe3d31d1136e}\label{classarcade_1_1SDL_a6f95ac12930d7ee7947abe3d31d1136e} 
+void {\bfseries render\+\_\+vector} (const std\+::vector$<$ std\+::string $>$ \&vec, const SDL\+\_\+\+Color \&text\+Color, int x, int y)
+\item 
+\Hypertarget{classarcade_1_1SDL_a1338fbefc3cf192aea64529d2c3b5fa3}\label{classarcade_1_1SDL_a1338fbefc3cf192aea64529d2c3b5fa3} 
+void {\bfseries render\+\_\+text} (const std\+::string \&text, const SDL\+\_\+\+Color \&color, int x, int y, int font\+Size, int max\+Width)
+\item 
+\Hypertarget{classarcade_1_1SDL_abc5d14398a662d41ed3e5ed5c8b3f390}\label{classarcade_1_1SDL_abc5d14398a662d41ed3e5ed5c8b3f390} 
+void {\bfseries display\+Game} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs)
+\item 
+\Hypertarget{classarcade_1_1SDL_aeb2d8abf2a81837cbecc457c7c662981}\label{classarcade_1_1SDL_aeb2d8abf2a81837cbecc457c7c662981} 
+void {\bfseries display\+Game\+Start} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs)
+\item 
+\Hypertarget{classarcade_1_1SDL_a1f1e22733b07c16ed2626255fb00bc54}\label{classarcade_1_1SDL_a1f1e22733b07c16ed2626255fb00bc54} 
+void {\bfseries choose\+Lib} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs, SDL\+\_\+\+Event event, SDL\+\_\+\+Rect my\+Rect, size\+\_\+t \texorpdfstring{$\ast$}{*}current\+List\+Index, std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ all\+Lists)
+\item 
+\Hypertarget{classarcade_1_1SDL_a58ea9384813189b27756486e4032458e}\label{classarcade_1_1SDL_a58ea9384813189b27756486e4032458e} 
+void {\bfseries render\+Sprite} (int x, int y, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}texture)
+\item 
+\Hypertarget{classarcade_1_1SDL_ab848378ac4d9a9709d7d7b1ba79587c1}\label{classarcade_1_1SDL_ab848378ac4d9a9709d7d7b1ba79587c1} 
+void {\bfseries render\+Sprite} (int x, int y, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}texture, SDL\+\_\+\+Rect \texorpdfstring{$\ast$}{*}src\+Rect)
+\item 
+\Hypertarget{classarcade_1_1SDL_a2c5245752679ec4fa8cdd5872797693f}\label{classarcade_1_1SDL_a2c5245752679ec4fa8cdd5872797693f} 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries load\+Texture} (const std\+::string \&path, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\Hypertarget{classarcade_1_1SDL_a5fd2dacc02837532e0f0c4150a598f30}\label{classarcade_1_1SDL_a5fd2dacc02837532e0f0c4150a598f30} 
+void {\bfseries game\+Events} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs, SDL\+\_\+\+Event event)
+\item 
+\Hypertarget{classarcade_1_1SDL_ae3894b8c7f865ad9b2e4e550ec8f5250}\label{classarcade_1_1SDL_ae3894b8c7f865ad9b2e4e550ec8f5250} 
+void {\bfseries game\+Over\+Menu} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs)
+\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classarcade_1_1IGraph_a84d7b79ddb51c99943e345308dbdd91b}{display\+Window}} (\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&gs)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classarcade_1_1SDL_ac313d4888b4b6639286c2018e514bb86}\label{classarcade_1_1SDL_ac313d4888b4b6639286c2018e514bb86} 
+\index{arcade::SDL@{arcade::SDL}!displayWindow@{displayWindow}}
+\index{displayWindow@{displayWindow}!arcade::SDL@{arcade::SDL}}
+\doxysubsubsection{\texorpdfstring{displayWindow()}{displayWindow()}}
+{\footnotesize\ttfamily void arcade\+::\+SDL\+::display\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classarcade_1_1GameState}{Game\+State}} \&}]{gs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+FAIRE LE MENU DE GAME OVER
+
+Implements \mbox{\hyperlink{classarcade_1_1IGraph}{arcade\+::\+IGraph}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+graph/SDL.\+hpp\item 
+graph/SDL.\+cpp\end{DoxyCompactItemize}

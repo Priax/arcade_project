@@ -1,0 +1,67 @@
+\doxysection{Parsing.\+hpp}
+\hypertarget{Parsing_8hpp_source}{}\label{Parsing_8hpp_source}\index{core\_/Parsing.hpp@{core\_/Parsing.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/OOP-\/400-\/MAR-\/4-\/1-\/arcade-\/vincent.montero-\/fontaine}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ Parsing}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ PARSING\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ PARSING\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <filesystem>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{namespace\ }arcade\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{class\ }Parsing;}
+\DoxyCodeLine{00019\ \}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classarcade_1_1Parsing}{arcade::Parsing}}\ \{}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ int>\ parseOneScoreFile(std::string\ scoreFilePath);}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::map<std::string,\ std::map<std::string,\ int>>\ parseScoresFromFile(std::string\ filepath);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::string\ getUsername(std::string\ \&line);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ getScore(std::string\ \&line);}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ getLibsFromPath(std::string\ path);}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ getGraphFromLibs(std::vector<std::string>\ libs);}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ std::vector<std::string>\ getGamesFromLibs(std::vector<std::string>\ libs);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ getLibType(std::string\ lib);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ writeScores(std::string\ filepath,\ std::map<std::string,\ int>\ scores);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00035\ \};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \textcolor{comment}{//*\ GLOBALS}}
+\DoxyCodeLine{00038\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\ GRAPH\_LIB\_LIST\ =\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \{\textcolor{stringliteral}{"{}SDL2"{}},\ \textcolor{stringliteral}{"{}arcade\_sdl2.so"{}}\},}
+\DoxyCodeLine{00040\ \ \ \ \ \{\textcolor{stringliteral}{"{}nCurses"{}},\ \textcolor{stringliteral}{"{}arcade\_ncurses.so"{}}\},}
+\DoxyCodeLine{00041\ \ \ \ \ \{\textcolor{stringliteral}{"{}NDK++"{}},\ \textcolor{stringliteral}{"{}arcade\_ndk++.so"{}}\},}
+\DoxyCodeLine{00042\ \ \ \ \ \{\textcolor{stringliteral}{"{}aa-\/lib"{}},\ \textcolor{stringliteral}{"{}arcade\_aalib.so"{}}\},}
+\DoxyCodeLine{00043\ \ \ \ \ \{\textcolor{stringliteral}{"{}libcaca"{}},\ \textcolor{stringliteral}{"{}arcade\_libcaca.so"{}}\},}
+\DoxyCodeLine{00044\ \ \ \ \ \{\textcolor{stringliteral}{"{}Allegro5"{}},\ \textcolor{stringliteral}{"{}arcade\_allegro5.so"{}}\},}
+\DoxyCodeLine{00045\ \ \ \ \ \{\textcolor{stringliteral}{"{}Xlib"{}},\ \textcolor{stringliteral}{"{}arcade\_xlib.so"{}}\},}
+\DoxyCodeLine{00046\ \ \ \ \ \{\textcolor{stringliteral}{"{}GTK+"{}},\ \textcolor{stringliteral}{"{}arcade\_gtk+.so"{}}\},}
+\DoxyCodeLine{00047\ \ \ \ \ \{\textcolor{stringliteral}{"{}SFML"{}},\ \textcolor{stringliteral}{"{}arcade\_sfml.so"{}}\},}
+\DoxyCodeLine{00048\ \ \ \ \ \{\textcolor{stringliteral}{"{}Irrlicht"{}},\ \textcolor{stringliteral}{"{}arcade\_irrlicht.so"{}}\},}
+\DoxyCodeLine{00049\ \ \ \ \ \{\textcolor{stringliteral}{"{}OpenGL"{}},\ \textcolor{stringliteral}{"{}arcade\_opengl.so"{}}\},}
+\DoxyCodeLine{00050\ \ \ \ \ \{\textcolor{stringliteral}{"{}Vulkan"{}},\ \textcolor{stringliteral}{"{}arcade\_vulkan.so"{}}\},}
+\DoxyCodeLine{00051\ \ \ \ \ \{\textcolor{stringliteral}{"{}Qt5"{}},\ \textcolor{stringliteral}{"{}arcade\_qt5"{}}\}\};}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \textcolor{keyword}{const}\ std::map<std::string,\ std::string>\ GAME\_LIB\_LIST\ =\ \{}
+\DoxyCodeLine{00054\ \ \ \ \ \{\textcolor{stringliteral}{"{}Snake"{}},\ \textcolor{stringliteral}{"{}arcade\_snake.so"{}}\},}
+\DoxyCodeLine{00055\ \ \ \ \ \{\textcolor{stringliteral}{"{}Nibbler"{}},\ \textcolor{stringliteral}{"{}arcade\_nibbler.so"{}}\},}
+\DoxyCodeLine{00056\ \ \ \ \ \{\textcolor{stringliteral}{"{}Pacman"{}},\ \textcolor{stringliteral}{"{}arcade\_pacman.so"{}}\},}
+\DoxyCodeLine{00057\ \ \ \ \ \{\textcolor{stringliteral}{"{}Qix"{}},\ \textcolor{stringliteral}{"{}arcade\_qix.so"{}}\},}
+\DoxyCodeLine{00058\ \ \ \ \ \{\textcolor{stringliteral}{"{}Centipede"{}},\ \textcolor{stringliteral}{"{}arcade\_centipede.so"{}}\},}
+\DoxyCodeLine{00059\ \ \ \ \ \{\textcolor{stringliteral}{"{}Solarfox"{}},\ \textcolor{stringliteral}{"{}arcade\_solarfox.so"{}}\}\};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !PARSING\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,87 @@
+\doxysection{SFML.\+hpp}
+\hypertarget{SFML_8hpp_source}{}\label{SFML_8hpp_source}\index{graph/SFML.hpp@{graph/SFML.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{**\ EPITECH\ PROJECT,\ 2024}}
+\DoxyCodeLine{00003\ \textcolor{comment}{**\ B-\/OOP-\/400-\/MAR-\/4-\/1-\/arcade-\/vincent.montero-\/fontaine}}
+\DoxyCodeLine{00004\ \textcolor{comment}{**\ File\ description:}}
+\DoxyCodeLine{00005\ \textcolor{comment}{**\ SFML}}
+\DoxyCodeLine{00006\ \textcolor{comment}{*/}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#ifndef\ SFML\_HPP\_}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ SFML\_HPP\_}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}IGraph.hpp"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SFML/Graphics.hpp>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <SFML/Graphics/Font.hpp>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}../core\_/GameState.hpp"{}}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{namespace\ }arcade\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{class\ }SFML;}
+\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classarcade_1_1SFML}{arcade::SFML}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classarcade_1_1IGraph}{arcade::IGraph}}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classarcade_1_1SFML}{SFML}}();}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classarcade_1_1SFML}{\string~SFML}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayWindow(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_i\ =\ 0;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ sf::String\ setGraphString(std::string\ str);}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ sf::String\ setGameString(std::string\ str);}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setLibs(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayArcadeMenu(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayGameMenu(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayGame(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displaySnake(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayNibbler(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayGameOverMenu(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setMenuAssets(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameMenuAssets();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameAssets(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ updateGameSprite(\textcolor{keywordtype}{char}\ c,\ sf::Sprite\ \&sprite);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ sf::Sprite\ setGameSprite(\textcolor{keywordtype}{char}\ c);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameOverMenuAssets();}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ GameEvents(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ GameOverEvents(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setFont();}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ enterUsername(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ MenuEvents(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ GameMenuEvents(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setMenuTextures();}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setMenuSprites();}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameMenuTextures();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameMenuSprites();}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameOverMenuTextures();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameOverMenuSprites();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameTextures();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setGameSprites(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ arcade::screenState\ \_status;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_libGraphIndex\ =\ 0;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_libGameIndex\ =\ 0;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \_isCreated\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ sf::RenderWindow\ \_window;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ sf::Event\ \_event;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::string\ \_map;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ std::vector<sf::Sprite>\_GameAssets\ =\ \{\};}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ std::map<std::string,\ sf::Sprite>\ \_assets;}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ std::map<const\ std::string,\ sf::Texture>\ \_textures;}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ std::vector<sf::Text>\ \_libGraph;}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ std::vector<sf::Text>\ \_libGame;}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ sf::Font\ \_textFont;}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ std::vector<sf::RectangleShape>\ \_gameArray\ =\ \{\};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ initGameArray(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ displayGameArray();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ updateGameArray(\mbox{\hyperlink{classarcade_1_1GameState}{GameState}}\ \&gs);}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ !SFML\_HPP\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}
