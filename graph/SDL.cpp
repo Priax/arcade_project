@@ -127,7 +127,7 @@ void arcade::SDL::gameOverMenu(GameState &gs)
                     gs.setState(arcade::screenState::STOP);
                     break;
                 case SDLK_RETURN:
-                    std::cout << "Game should restart" << std::endl;
+                    // std::cout << "Game should restart" << std::endl;
                     gs.setState(arcade::screenState::GAME_START);
                     break;
                 case SDLK_TAB:
